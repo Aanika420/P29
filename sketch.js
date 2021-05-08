@@ -20,7 +20,10 @@ function setup() {
   ground = new Ground();
   stand1 = new Stand(390,300,250,10);
   stand2 = new Stand(700,200,200,10);
- 
+
+  //polygon
+  polygon1 = new Polygon(100,200,50,50);
+
   //level one
   block1 = new Block(300,275,30,40);
   console.log(block1);
@@ -43,7 +46,7 @@ function setup() {
   //top
   block16 = new Block(390,155,30,40);
 
-  slingshot = new SlingShot(polygon,{x:200, y:50});
+  slingshot = new SlingShot(polygon1,{x:200, y:50});
   
 
 }
@@ -57,7 +60,7 @@ function draw() {
   ground.display();
   stand1.display();
   
-  polygon.display();
+  polygon1.display();
 
   strokeWeight(2);
   stroke(15);
@@ -85,7 +88,7 @@ function draw() {
 }
 
 function mouseDragged(){
-  Matter.Body.setPosition(polygon, {x: mouseX , y: mouseY});
+  Matter.Body.setPosition(polygon1, {x: mouseX , y: mouseY});
 }
 
 
