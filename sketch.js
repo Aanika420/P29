@@ -46,7 +46,7 @@ function setup() {
   //top
   block16 = new Block(390,155,30,40);
 
-  slingshot = new SlingShot(polygon1,{x:200, y:50});
+  slingshot = new SlingShot(polygon1.body,{x:200, y:50});
   
 
 }
@@ -88,7 +88,7 @@ function draw() {
 }
 
 function mouseDragged(){
-  Matter.Body.setPosition(polygon1, {x: mouseX , y: mouseY});
+  Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
 }
 
 
